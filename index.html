@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | lolpoppin</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f609.svg" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #0b1b3a, #000000);
+      background-size: 200% 200%;
+      animation: smoothFade 30s ease-in-out infinite;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes smoothFade {
+      0%   { background-position: 0% 0%; background-color: #0b1b3a; }
+      50%  { background-position: 100% 100%; background-color: #000000; }
+      100% { background-position: 0% 0%; background-color: #0b1b3a; }
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 2rem 3rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .pfp {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #7289da;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px #7289da, 0 0 20px #7289da;
+    }
+
+    .bio {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #c9d1d9;
+      max-width: 400px;
+    }
+
+    .buttons {
+      position: relative;
+      display: inline-block;
+    }
+
+    .buttons a {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #5865f2;
+      color: white;
+      text-decoration: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .buttons a::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      border-radius: 14px;
+      background: conic-gradient(
+        from 0deg,
+        #7289da,
+        #4e5ed9,
+        #5865f2,
+        #4e5ed9,
+        #7289da
+      );
+      z-index: 0;
+      filter: blur(6px);
+      opacity: 0.7;
+      animation: spinGlow 5s linear infinite;
+    }
+
+    @keyframes spinGlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .buttons a span,
+    .buttons a img {
+      position: relative;
+      z-index: 2;
+    }
+
+    .buttons a img {
+      width: 20px;
+      filter: invert(1);
+    }
+
+    .buttons a:hover {
+      background-color: #4752c4;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <img src="profile.png" alt="Profile Picture" class="pfp" />
+    <h1>lolpoppin</h1>
+    <p class="bio">
+           <b>lolpoppin</b> — Idk Man Join The discord I guess
+    </p>
+
+    <div class="buttons">
+      <a href="https://discord.gg/kRssab32h3" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" />
+        <span>Discord Server</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
